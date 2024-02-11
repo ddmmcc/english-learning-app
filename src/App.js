@@ -6,23 +6,19 @@ import { Home } from "./components/Home";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 
 import { AuthProvider } from "./context/AuthContext";
+import { DBProvider } from "./context/userContext";
 
 function App() {
   return (
     <div className="bg-slate-300 text-black h-screen flex text-white">
       <AuthProvider>
-        <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route
-            path="/"
-            element={
-              <ProtectedRoute>
-                <Home />
-              </ProtectedRoute>
-            }
-          />
-          <Route path="/register" element={<Register />} />
-        </Routes>
+        <DBProvider>
+          <Routes>
+            <Route path="/login" element={<Login />} />
+            <Route path="/" element={ <ProtectedRoute> <Home /> </ProtectedRoute> } />
+            <Route path="/register" element={<Register />} />
+          </Routes>
+        </DBProvider>
       </AuthProvider>
     </div>
   );

@@ -1,3 +1,6 @@
+video usado: https://www.youtube.com/watch?v=H_vEJt5Id_I&t=41s
+https://github.com/FaztWeb/react-firebase-auth.git
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

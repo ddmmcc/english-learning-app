@@ -1,7 +1,10 @@
 import { useAuth } from "../context/AuthContext";
+import { useDb } from "../context/userContext";
+import { useEffect, useState } from "react";
 
 export function Home() {
   const { logout, user } = useAuth();
+  const { getUserDetail } = useDb();
 
   console.log(user);
   const handleLogout = async () => {
@@ -12,10 +15,28 @@ export function Home() {
     }
   };
 
+  const [userDetail, setUserDetail] = useState({
+    description: "",
+    nick: "",
+  });
+
+  const _getUserDetail = async () => {
+    const userDetailData = await getUserDetail();
+    console.log(userDetailData);
+    setUserDetail(userDetailData);
+  }
+  console.log('home');
+  
+  useEffect(() => {
+    _getUserDetail();
+  }, [])
+
   return (
+    
     <div className="w-full max-w-xs m-auto text-black">
       <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-        <p className="text-xl mb-4">welcome {user.displayName || user.email}</p>
+        <p className="text-xl mb-4">Bienvenido {userDetail?.nick || user.displayName || user.email}</p>
+        <p>Tu descripción:  {userDetail?.description}</p>
         <button
           className="bg-slate-200 hover:bg-slate-300 rounded py-2 px-4 text-black"
           onClick={handleLogout}

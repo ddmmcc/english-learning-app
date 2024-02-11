@@ -5,7 +5,13 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  // put your credentials here
+  apiKey: "AIzaSyDHFHaRquDG_JkBMzM26QzQKfsXe1AvHJ8",
+  authDomain: "fir-react-login-seed.firebaseapp.com",
+  databaseURL: "https://fir-react-login-seed-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "fir-react-login-seed",
+  storageBucket: "fir-react-login-seed.appspot.com",
+  messagingSenderId: "111794557588",
+  appId: "1:111794557588:web:7017ac634effa83b445a81"
 };
 
 // Initialize Firebase

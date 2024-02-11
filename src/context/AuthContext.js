@@ -12,7 +12,7 @@ import { auth } from "../firebase";
 
 const authContext = createContext();
 
-export const useAuth = () => {
+export const useAuth = () => { // esto es un hook para no tener que importar el context en cada componente
   const context = useContext(authContext);
   if (!context) throw new Error("There is no Auth provider");
   return context;
