@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 export function Home() {
   const { logout, user } = useAuth();
   const { getUserDetail } = useDb();
-  const { getDoc } = useData();
+  const { getADoc } = useData();
 
   console.log(user);
   const handleLogout = async () => {
@@ -29,7 +29,7 @@ export function Home() {
   }
 
   const _getData = async () => {
-    const result = await getDoc('series', 'DBZ_EN');
+    const result = await getADoc('series', 'DBZ_EN');
     console.log('series', result);
   };
   console.log('home');

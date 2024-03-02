@@ -5,13 +5,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDHFHaRquDG_JkBMzM26QzQKfsXe1AvHJ8",
-  authDomain: "fir-react-login-seed.firebaseapp.com",
-  databaseURL: "https://fir-react-login-seed-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "fir-react-login-seed",
-  storageBucket: "fir-react-login-seed.appspot.com",
-  messagingSenderId: "111794557588",
-  appId: "1:111794557588:web:7017ac634effa83b445a81"
+  apiKey: "AIzaSyD0FiJ3vwH4_9UCuXqtrS8ti6XAYJDvwb8",
+  authDomain: "english-learning-46694.firebaseapp.com",
+  projectId: "english-learning-46694",
+  storageBucket: "english-learning-46694.appspot.com",
+  messagingSenderId: "35094008730",
+  appId: "1:35094008730:web:81233c6ff6aee4acf2e023"
 };
 
 // Initialize Firebase

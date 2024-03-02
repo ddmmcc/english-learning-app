@@ -28,7 +28,7 @@ export function DataProvider({ children }) {
   const [userDetail, setUserDetail] = useState(null);
   const db = getFirestore();
 
-  const getDoc = async (collectionName, docName) => { 
+  const getADoc = async (collectionName, docName) => { 
     const uid = user.uid
     const docData = [];
 
@@ -45,7 +45,7 @@ export function DataProvider({ children }) {
   return (
     <dataContext.Provider
       value={{
-        getDoc,
+        getADoc,
       }}
     >
       {children}
