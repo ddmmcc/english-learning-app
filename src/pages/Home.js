@@ -1,10 +1,12 @@
 import { useAuth } from "../context/AuthContext";
 import { useDb } from "../context/userContext";
+import { useData } from "../context/dataContext";
 import { useEffect, useState } from "react";
 
 export function Home() {
   const { logout, user } = useAuth();
   const { getUserDetail } = useDb();
+  const { getDoc } = useData();
 
   console.log(user);
   const handleLogout = async () => {
@@ -25,10 +27,17 @@ export function Home() {
     console.log(userDetailData);
     setUserDetail(userDetailData);
   }
+
+  const _getData = async () => {
+    const result = await getDoc('series', 'DBZ_EN');
+    console.log('series', result);
+  };
   console.log('home');
   
   useEffect(() => {
     _getUserDetail();
+    _getData();
+    
   }, [])
 
   return (

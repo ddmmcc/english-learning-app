@@ -39,7 +39,6 @@ export function DBProvider({ children }) {
     // const q = query(collection(db, "userDetail"), where("uid", "==", uid));
     // debugger;
     // const querySnapshot = await getDocs(q);
-
     const docRef = doc(db, 'userDetail', uid);
     // getDoc(docRef)
     //   .then((docSnap) => {
