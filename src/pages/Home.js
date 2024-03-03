@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 export function Home() {
   const { logout, user } = useAuth();
   const { getUserDetail } = useDb();
-  const { getADoc } = useData();
+  const { getDocByCollection, getDocsIdsByCollection } = useData();
 
   console.log(user);
   const handleLogout = async () => {
@@ -28,16 +28,23 @@ export function Home() {
     setUserDetail(userDetailData);
   }
 
-  const _getData = async () => {
-    const result = await getADoc('series', 'DBZ_EN');
-    console.log('series', result);
+  const _getDoc = async () => {
+    const result = await getDocByCollection('series', 'DBZ_EN');
+    console.log('doc DBZ_EN by series', result);
   };
+
+  const _getDocIds = async () => {
+    const result = await getDocsIdsByCollection('series');
+    console.log('docIds by series', result);
+  };
+
+
   console.log('home');
   
   useEffect(() => {
     _getUserDetail();
-    _getData();
-    
+    _getDoc();
+    _getDocIds();
   }, [])
 
   return (

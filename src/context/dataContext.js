@@ -25,10 +25,9 @@ export const useData = () => {
 
 export function DataProvider({ children }) {
   const { logout, user } = useAuth();
-  const [userDetail, setUserDetail] = useState(null);
   const db = getFirestore();
 
-  const getADoc = async (collectionName, docName) => { 
+  const getDocByCollection = async (collectionName, docName) => { 
     const uid = user.uid
     const docData = [];
 
@@ -42,10 +41,21 @@ export function DataProvider({ children }) {
     }
   };
 
+  const getDocsIdsByCollection = async (collectionName) => {
+    const db = getFirestore();
+    const collectionRef = collection(db, collectionName);
+    const _querySnapshot = await getDocs(collectionRef);
+    const docIds = _querySnapshot.docs.map(doc => {
+      return doc.id
+    });
+    return docIds;
+  }
+
   return (
     <dataContext.Provider
       value={{
-        getADoc,
+        getDocByCollection,
+        getDocsIdsByCollection
       }}
     >
       {children}
