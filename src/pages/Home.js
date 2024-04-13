@@ -2,6 +2,10 @@ import { useAuth } from "../context/AuthContext";
 import { useDb } from "../context/userContext";
 import { useData } from "../context/dataContext";
 import { useEffect, useState } from "react";
+import { Counter } from "../lit-components/my-counter";
+import { SimpleButton } from "../lit-components/simple-button/simple-button.js";
+import {ButtonClon} from "../lit-components/button-clon/button-clon.js";
+import './Home.css';
 
 export function Home() {
   const { logout, user } = useAuth();
@@ -47,19 +51,18 @@ export function Home() {
     _getDocIds();
   }, [])
 
-  return (
-    
-    <div className="w-full max-w-xs m-auto text-black">
-      <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-        <p className="text-xl mb-4">Bienvenido {userDetail?.nick || user.displayName || user.email}</p>
-        <p>Tu descripción:  {userDetail?.description}</p>
-        <button
-          className="bg-slate-200 hover:bg-slate-300 rounded py-2 px-4 text-black"
-          onClick={handleLogout}
-        >
-          logout
-        </button>
+  return (    
+    <div>
+      <div className="home">
+        <simple-button>Traducciones</simple-button>
+        <simple-button>Tarjetas</simple-button>
+        <simple-button>Ejercicios</simple-button>
+        <button-clon>Traducciones-clon</button-clon>
+        <button-clon>Tarjetas-clon</button-clon>
+        <button-clon>Ejercicios-clon</button-clon>
       </div>
     </div>
+
+    
   );
 }

@@ -4,6 +4,7 @@ import { Login } from "./pages/Login";
 import { Register } from "./pages/Register";
 import { Home } from "./pages/Home";
 import { ProtectedRoute } from "./pages/ProtectedRoute";
+import { Layout } from "./layout/layout.js"
 
 import { AuthProvider } from "./context/AuthContext";
 import { DBProvider } from "./context/userContext";
@@ -11,16 +12,19 @@ import { DataProvider } from "./context/dataContext";
 
 function App() {
   return (
-    <div className="bg-slate-300 text-black h-screen flex text-white">
+    // <div className="bg-slate-300 text-black h-screen flex text-white">
+    <div>
       <AuthProvider>
         <DBProvider>
           <DataProvider>
             <Routes>
               <Route path="/login" element={<Login />} />
-              <Route path="/" element={ <ProtectedRoute> <Home /> </ProtectedRoute> } />
+              <Route path="/" element={ <ProtectedRoute> <Layout title="home"><Home /></Layout> </ProtectedRoute> } />
+              <Route path="/home" element={ <ProtectedRoute> <Layout title="home"><Home /></Layout> </ProtectedRoute> } />
+              <Route path="/pedro" element={ <ProtectedRoute> <Layout title="titulo pedro"><div>soy pedro</div></Layout> </ProtectedRoute> } />
               <Route path="/register" element={<Register />} />
             </Routes>
-          </DataProvider>
+          </DataProvider>            
         </DBProvider>
       </AuthProvider>
     </div>

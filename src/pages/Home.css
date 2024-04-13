@@ -1,0 +1,8 @@
+.home {
+    display: flex;
+    background: rgb(173, 173, 253);
+    flex-flow: column nowrap;
+    height: 100%;
+    justify-content: space-around;
+    padding: 50px;
+}
