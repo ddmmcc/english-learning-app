@@ -9,6 +9,9 @@ import { Layout } from "./layout/layout.js"
 import { AuthProvider } from "./context/AuthContext";
 import { DBProvider } from "./context/userContext";
 import { DataProvider } from "./context/dataContext";
+import { TraduccionesList } from "./pages/traducciones/TraduccionesList.js";
+import { Capitulos } from "./pages/capitulos/capitulos.js";
+import { Traduccion } from "./pages/traduccion/traduccion.js";
 
 function App() {
   return (
@@ -21,7 +24,9 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/" element={ <ProtectedRoute> <Layout title="home"><Home /></Layout> </ProtectedRoute> } />
               <Route path="/home" element={ <ProtectedRoute> <Layout title="home"><Home /></Layout> </ProtectedRoute> } />
-              <Route path="/pedro" element={ <ProtectedRoute> <Layout title="titulo pedro"><div>soy pedro</div></Layout> </ProtectedRoute> } />
+              <Route path="/traducciones" element={ <ProtectedRoute> <Layout title="Traducciones"><TraduccionesList /></Layout> </ProtectedRoute> } />
+              <Route path="/capitulos/:serieId" element={ <ProtectedRoute> <Layout title="Capitulos"><Capitulos /></Layout> </ProtectedRoute> } />
+              <Route path="/traduccion/:capitulo" element={ <ProtectedRoute> <Layout title="Traduccion"><Traduccion /></Layout> </ProtectedRoute> } />
               <Route path="/register" element={<Register />} />
             </Routes>
           </DataProvider>            
