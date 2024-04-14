@@ -1,0 +1,17 @@
+
+
+
+.st-button{
+    background-color: beige; 
+    display: block;
+    padding: 1rem 2rem;
+    border: 1px solid brown;
+    border-radius: 1rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.st-button:hover {
+    background: lightblue;
+    color: white;
+}

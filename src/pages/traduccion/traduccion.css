@@ -1,0 +1,15 @@
+.traduccion {
+    padding: 20px;
+}
+
+.traduccion .en {
+    
+}
+.traduccion .es {
+    color: grey;
+}
+
+.traduccion .traduccion-row {
+    margin-bottom: 10px;
+}
+
