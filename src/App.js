@@ -12,6 +12,8 @@ import { DataProvider } from "./context/dataContext";
 import { TraduccionesList } from "./pages/traducciones/TraduccionesList.js";
 import { Capitulos } from "./pages/capitulos/capitulos.js";
 import { Traduccion } from "./pages/traduccion/traduccion.js";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -32,6 +34,17 @@ function App() {
           </DataProvider>            
         </DBProvider>
       </AuthProvider>
+      <ToastContainer 
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   );
 }
