@@ -13,3 +13,8 @@
     margin-bottom: 10px;
 }
 
+.button-save-card{
+    position: fixed;
+    bottom: 26px;
+    right: 14px;
+}

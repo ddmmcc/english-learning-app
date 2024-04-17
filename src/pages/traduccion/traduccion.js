@@ -78,7 +78,7 @@ export function Traduccion() {
   return (    
     <div className="traduccion">
         <h2>Subtitulos capitulo {capitulo}</h2>
-        <button onClick={saveSelection}>Guardar</button>
+        <button className="button-save-card" onClick={saveSelection}>Guardar</button>
         {
           (traduccion?.EN || []).map((item, i) => {
               return <div className="traduccion-row" key={i}>
