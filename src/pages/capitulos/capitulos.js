@@ -40,7 +40,6 @@ export function Capitulos() {
 
   const _getDocIds = async () => {
     const result = await getDocsIdsByCollection('subtitles');
-    debugger;
     setCapitulos(result);
     console.log('docIds by series', result);
   };
