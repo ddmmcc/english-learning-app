@@ -2,16 +2,18 @@
 
 
 .st-button{
-    background-color: beige; 
+    background-color: var(--primary-color); 
+    color: var(--shine-text-color);
+    margin: 2px;
     display: block;
     padding: 1rem 2rem;
-    border: 1px solid brown;
     border-radius: 1rem;
     text-align: center;
     cursor: pointer;
+    text-decoration: unherit;
 }
 
 .st-button:hover {
-    background: lightblue;
+    background: var(--primary-color-highlight);
     color: white;
 }

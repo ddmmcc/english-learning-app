@@ -54,30 +54,16 @@ export function Home() {
   }, [])
 
   return (    
-    <div>
-      <div className="home">
-        <Link to="/traducciones">
-          <StandarButton>Traducciones</StandarButton>
-        </Link>
-        <Link to="/tarjetas">
-        <StandarButton>Tarjetas</StandarButton>
-        </Link>
-        <Link to="/ejercicios">
-          <StandarButton>Ejercicios</StandarButton>
-        </Link>
-      </div>
-
-      <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-        <p className="text-xl mb-4">Bienvenido {userDetail?.nick || user.displayName || user.email}</p>
-        <p>Tu descripción:  {userDetail?.description}</p>
-        <button
-          className="bg-slate-200 hover:bg-slate-300 rounded py-2 px-4 text-black"
-          onClick={handleLogout}
-        >
-          logout
-        </button>
-      </div>
-
+    <div className="home">
+      <Link to="/traducciones">
+        <StandarButton>Traducciones</StandarButton>
+      </Link>
+      <Link to="/tarjetas">
+      <StandarButton>Tarjetas</StandarButton>
+      </Link>
+      <Link to="/ejercicios">
+        <StandarButton>Ejercicios</StandarButton>
+      </Link>
     </div>
 
     
