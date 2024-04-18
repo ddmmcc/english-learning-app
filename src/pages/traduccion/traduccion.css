@@ -15,6 +15,6 @@
 
 .button-save-card{
     position: fixed;
-    bottom: 26px;
+    top: calc(30px + var(--header-height));
     right: 14px;
 }
