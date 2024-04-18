@@ -1,0 +1,45 @@
+.login {
+    background: rgb(163, 196, 232);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login .login-box {
+    background: rgb(220, 220, 220);
+    padding: 40px;
+    border-radius: 4px;
+    box-shadow: 0 0 100px -20px rgba(0,0,0,.5);
+}
+
+.login .login-box form{
+    display: flex;
+    flex-flow: column nowrap;
+}
+.login .login-box form .mb-4{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.login label {
+    padding-bottom: 10px;
+}
+
+.login input {
+    border: 0;
+    border-radius: 4px;
+    height: 35px;
+    margin-bottom: 10px;
+    padding-left: 8px;
+}
+
+.login button {
+    background: rgb(59 130 246);
+    border: 0;
+    padding: 8px 12px;
+    border-radius: 4px;
+    color: white;
+    margin-bottom: 10px;
+    margin-right: 30px;
+}
