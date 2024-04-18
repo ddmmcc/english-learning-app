@@ -1,0 +1,14 @@
+
+.header {
+    height: var(--header-height);
+    background: var(--primary-color);
+    color: var(--shine-text-color);
+    padding: 4px 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+.header .header-item {
+    display: flex;
+    align-items: center;
+}
